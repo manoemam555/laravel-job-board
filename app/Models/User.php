@@ -9,6 +9,9 @@ use Illuminate\Notifications\Notifiable;
 
 class User extends Authenticatable
 {
+     protected $primaryKey = "id";
+    protected $keyType = 'string'; //UUID universal unique identifier
+    public $incrementing = false;
     /** @use HasFactory<\Database\Factories\UserFactory> */
     use HasFactory, Notifiable;
 
